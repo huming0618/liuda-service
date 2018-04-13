@@ -1,4 +1,4 @@
-package org.liuda;
+package org.liuda.controller;
 
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;

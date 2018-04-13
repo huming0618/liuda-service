@@ -31,7 +31,12 @@ springBoot {
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web:2.0.1.RELEASE")
+    compileOnly('org.projectlombok:lombok:1.16.20')
+    compile('org.springframework.boot:spring-boot-starter')
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('javax.xml.bind:jaxb-api:2.3.0')
+    runtime('org.postgresql:postgresql:42.2.1')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
