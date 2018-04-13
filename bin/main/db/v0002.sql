@@ -21,3 +21,10 @@ create table thirdparty (
     primary key (id)
 );
 
+create table orderstatus (
+    id bigserial not null,
+    order_id bigint not null references eventorder (id),
+    status varchar(10) not null
+);
+
+
