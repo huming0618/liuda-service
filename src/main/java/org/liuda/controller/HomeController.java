@@ -28,19 +28,15 @@ public class HomeController {
     @Autowired
     private IThirdpartyService thirdpartyService;
 
-    @RequestMapping("/")
+    @RequestMapping("/hello")
     @ResponseBody
-    String home() {
-        return "Hello World!";
+    String hello() {
+        return "hello !";
     }
 
     @RequestMapping(value="/auth/thirdparty", method = RequestMethod.POST)
     @ResponseBody
-    String authThirdParty(@RequestBody ThirdPartyAuthDto request) {
-        thirdpartyService.validAuthCode(request);
-        return "OK";
+    ResponseDto authThirdParty(@RequestBody ThirdPartyAuthDto request) {
+        return thirdpartyService.validAuthCode(request);
     }
-//    public static void main(String[] args) throws Exception {
-//        SpringApplication.run(HomeController.class, args);
-//    }
 }
