@@ -1,0 +1,22 @@
+{
+    "run": [
+        {
+            "name": "liuda-service",
+            "projectName": "liuda-service",
+            "workingDirectory": "/Users/peter/Desktop/workspace/liuda-service",
+            "args": [],
+            "vmargs": [],
+            "preLaunchTask": ""
+        }
+    ],
+    "debug": [
+        {
+            "name": "liuda-service",
+            "projectName": "liuda-service",
+            "workingDirectory": "/Users/peter/Desktop/workspace/liuda-service",
+            "args": [],
+            "vmargs": [],
+            "preLaunchTask": ""
+        }
+    ]
+}

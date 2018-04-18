@@ -26,7 +26,7 @@ import java.util.List;
 // @SpringBootTest(classes = {Application.class})
 @DataJpaTest
 @AutoConfigureTestDatabase(replace=AutoConfigureTestDatabase.Replace.NONE)
-// @Transactional(propagation = Propagation.NOT_SUPPORTED)
+//@Transactional(propagation = Propagation.NOT_SUPPORTED)
 // @Transactional(propagation = Propagation.NOT_SUPPORTED)
 public class ThirdpartyTests {
     @Autowired
@@ -43,7 +43,11 @@ public class ThirdpartyTests {
         this.entityManager.persist(item);
 
         List<Thirdparty> result = repository.findAll();
+    
         assertThat(result.isEmpty()).isFalse();
         assertThat(result.size()).isEqualTo(1);
+
+        Thirdparty byCodeResult = repository.findByCode("TEST001");
+        assertThat(byCodeResult.getName()).isEqualTo("Test_Third");
     }
 }
