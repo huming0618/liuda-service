@@ -36,7 +36,7 @@ public class HomeController {
 
     @RequestMapping(value="/auth/thirdparty", method = RequestMethod.POST)
     @ResponseBody
-    ResponseDto authThirdParty(@RequestBody ThirdPartyAuthDto request) {
+    ResponseDto authThirdParty(@RequestBody AuthThirdPartyDto request) {
         return thirdpartyService.validAuthCode(request);
     }
 }

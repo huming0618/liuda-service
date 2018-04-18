@@ -8,7 +8,10 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-public class ThirdPartyAuthDto {
+public class GetOrderDto {
     @NotNull
-    private String code;
+    private Integer statusCode;
+
+    @NotNull
+    private Object data;
 }

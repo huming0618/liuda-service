@@ -31,6 +31,9 @@ public class Order {
   private String phone;
 
   @NotNull
+  private Integer qty;
+  
+  @NotNull
   private Date createon;
 
 }
